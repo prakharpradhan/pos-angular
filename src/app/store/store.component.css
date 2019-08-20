@@ -1,0 +1,26 @@
+.name{
+    float: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: blue;
+}
+td{
+    font-size: 30px;
+    color:black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+table{
+    margin-top: 5%;
+}
+.store{  margin-top: 2%;
+margin-left:45%; 
+
+}
+.texts{
+  
+  
+    width: 500px;
+    
+   }
+  

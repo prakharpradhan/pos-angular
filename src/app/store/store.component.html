@@ -1,0 +1,83 @@
+<div class="name">
+    {{custName}}
+</div>
+<hr>
+
+<form class="form-group">
+    <input class="form-control texts" name="storeName" type="text" [(ngModel)]="storeName"
+        placeholder="Enter Store Name"><br>
+    <span class="alert alert-danger error" *ngIf="errorcontrol">{{errorMsg}}</span>
+</form>
+
+
+<button (click)="searchStore()" class="btn btn-primary store">CLICK HERE TO SEARCH STORE</button>
+<table class="table" *ngIf="showStore">
+
+    <thead class="thead-dark">
+
+        <th>StoreID</th>
+        <th>StoreName</th>
+        <th>StoreAddress</th>
+        <th>StoreContact</th>
+        <th>OwnerName</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let str of storearray">
+
+            <td>{{str.storeId}}</td>
+            <td>{{str.storeName}}</td>
+            <td>{{str.storeAddress}}</td>
+            <td>{{str.storeContact}}</td>
+            <td>{{str.ownerName}}</td>
+
+            <td>
+                <button (click)="viewPizza(str.storeName)" class="btn btn-primary">CLICK TO SEE PIZZA</button></td>
+        </tr>
+    </tbody>
+
+
+</table>
+
+
+
+<table class="table" *ngIf="showPizza">
+
+    <thead class="thead-dark">
+
+        <th>StoreID</th>
+        <th>PizzaName</th>
+        <th>PizzaId</th>
+        <th>AvailableQty</th>
+        <th>Price</th>
+        <th>Enter Qty</th>
+        <th></th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let str of pizzaarray">
+
+            <td>{{str.storeID}}</td>
+            <td>{{str.pizzaName}}</td>
+            <td>{{str.itemId}}</td>
+            <td>{{str.qty}}</td>
+            <td>{{str.price}}</td>
+            <td>
+                <select id="myList" [(ngModel)]="cartQty">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </td>
+
+
+
+            <td>
+                <button (click)="addCart(str.itemId)" class="btn btn-primary">ADDTOCART</button></td>
+        </tr>
+    </tbody>
+
+
+</table>

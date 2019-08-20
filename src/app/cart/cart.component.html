@@ -1,0 +1,67 @@
+<html>
+
+<head>
+
+    <title>
+
+    </title>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <table class="table">
+               
+                <tr>
+                    <td> <button (click)="viewCart()" class="btn btn-primary">VIEW CART</button></td>
+                    <td><button (click)="dtl()" class="btn btn-primary">DELETE CART</button></td>
+                    <td><button (click)="modif()" class="btn btn-primary">UPDATE CART</button></td>
+                    <td><button (click)="order()" class="btn btn-primary"> CONFIRM ORDER</button></td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="sub">
+
+            <div class="subdiv">
+                <table class="table">
+
+                    <thead class="thead-dark">
+
+                        <th>CartId</th>
+                        <th>ItemId</th>
+                        <th>CustId</th>
+                        <th>Quantity</th>
+                        <th>Delivery Cahrges</th>
+                        <th>Resturant Charge</th>
+                        <th>Total</th>
+                        <th colspan="2">UpdateCart</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let str of cartarray">
+                            <td>{{str.cartId}}</td>
+                            <td>{{str.itemId}}</td>
+                            <td>{{str.custId}}</td>
+                            <td>{{str.quantity}}</td>
+                            <td>{{str.delievryCharges}}</td>
+                            <td>{{str.restCharges}}</td>
+                            <td>{{str.total}}</td>
+                            <td><input  [(ngModel)]="qty" [disabled]="modify" type="text" [(ngModel)]="cartQty"></td>
+                            
+                            <td><button (click)="updateCart(str.cartId)" [disabled]="modify"
+                                    class="btn btn-primary">UpdateCART</button></td>
+                            
+                        </tr>
+                    </tbody>
+
+
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

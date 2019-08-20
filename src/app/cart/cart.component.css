@@ -1,0 +1,47 @@
+.table{
+    margin-top: 5%;
+    width: 100%;
+border-collapse: collapse
+}
+
+td,th{
+    border: 1px solid;
+    text-align: left;
+    padding: 8px;
+}
+.head{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
+.sub{
+   border-top: 1px solid;
+    margin: 8px;
+    width: 100%;
+}
+.subdiv{
+text-align: center;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 40px;
+display: inline-block;
+
+
+}
+ul{
+    
+    list-style-type: none;
+    
+}
+.listdiv{
+    width: 20%;
+height: 100%;
+display: inline-block;
+    border-right:  1px solid red;
+   
+}
+.span{
+    padding: 200px;
+}
+.main{
+    margin-top: 5%;
+}
